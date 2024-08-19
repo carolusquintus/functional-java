@@ -10,11 +10,12 @@ import java.util.stream.IntStream;
 
 @Slf4j
 public class Cities {
+
     public static void main(String[] args) {
         var faker = new Faker(Locale.of("es", "MX"));
         var cities = new ArrayList<String>();
 
-        IntStream.range(0, 20).forEach(i -> cities.add(faker.address().city()));
+        IntStream.range(0, 20).forEach(_ -> cities.add(faker.address().city()));
 
         log.info(cities.toString());
 
@@ -38,4 +39,5 @@ public class Cities {
         var found = cities.contains(name);
         log.info(found ? "Found" : "Not found");
     }
+
 }
