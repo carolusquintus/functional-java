@@ -15,7 +15,7 @@ public class Cities {
         var faker = new Faker(Locale.of("es", "MX"));
         var cities = new ArrayList<String>();
 
-        IntStream.range(0, 20).forEach(_ -> cities.add(faker.address().city()));
+        IntStream.range(0, 20).forEach(i -> cities.add(faker.address().city()));
 
         log.info(cities.toString());
 
