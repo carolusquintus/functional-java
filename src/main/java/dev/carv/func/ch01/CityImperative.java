@@ -1,21 +1,15 @@
 package dev.carv.func.ch01;
 
-import com.github.javafaker.Faker;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.stream.IntStream;
 
 @Slf4j
-public class Cities {
+public class CityImperative implements City {
 
     public static void main(String[] args) {
-        var faker = new Faker(Locale.of("es", "MX"));
-        var cities = new ArrayList<String>();
-
-        IntStream.range(0, 20).forEach(i -> cities.add(faker.address().city()));
+        var city = new CityImperative();
+        var cities = city.generateCities();
 
         log.info(cities.toString());
 
