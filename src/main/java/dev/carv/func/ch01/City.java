@@ -8,9 +8,9 @@ import java.util.Locale;
 
 public interface City extends RandomGenerator {
 
-    default List<String> generateCities() {
+    default List<String> generateCities(int size) {
         var faker = new Faker(Locale.US);
-        return generateList(20, () -> faker.address().city());
+        return generateList(size, () -> faker.address().city());
     }
 
 }

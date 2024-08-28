@@ -9,7 +9,7 @@ public class CityImperative implements City {
 
     public static void main(String[] args) {
         var city = new CityImperative();
-        var cities = city.generateCities();
+        var cities = city.generateCities(8);
 
         log.info(cities.toString());
 
