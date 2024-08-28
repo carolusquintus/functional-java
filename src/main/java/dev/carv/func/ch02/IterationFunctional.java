@@ -9,7 +9,7 @@ public class IterationFunctional implements Iteration {
 
     public static void main(String[] args) {
         var iteration = new IterationImperative();
-        var friends = iteration.generateNames();
+        var friends = iteration.generateNames(18);
 
         log.debug("--- Iterable for each ---");
         friends.forEach(new Consumer<String>() {

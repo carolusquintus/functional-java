@@ -8,9 +8,9 @@ import java.util.Locale;
 
 public interface Iteration extends RandomGenerator {
 
-    default List<String> generateNames() {
+    default List<String> generateNames(int size) {
         var faker = new Faker(Locale.US);
-        return generateList(20, () -> faker.name().firstName());
+        return generateList(size, () -> faker.name().firstName());
     }
 
 }

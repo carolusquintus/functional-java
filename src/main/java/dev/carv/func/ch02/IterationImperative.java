@@ -9,7 +9,7 @@ public class IterationImperative implements Iteration {
 
     public static void main(String[] args) {
         var iteration = new IterationImperative();
-        var friends = iteration.generateNames();
+        var friends = iteration.generateNames(9);
 
         log.debug("--- Classic for ---");
         for (int i = 0; i < friends.size(); i++) {
