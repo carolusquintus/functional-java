@@ -10,7 +10,7 @@ public class DiscountImperative implements Discount {
     public static void main(String[] args) {
         var discount = new DiscountImperative();
 
-        var prices = discount.generatePrices();
+        var prices = discount.generatePrices(11);
         log.info(prices.toString());
 
         log.debug("Total of discounted prices: $ {}", discount.calculate(prices));

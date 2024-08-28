@@ -10,7 +10,7 @@ public class DiscountFunctional implements Discount {
     public static void main(String[] args) {
         var discount = new DiscountFunctional();
 
-        var prices = discount.generatePrices();
+        var prices = discount.generatePrices(12);
         log.info(prices.toString());
 
         log.debug("Total of discounted prices: $ {}", discount.calculate(prices));

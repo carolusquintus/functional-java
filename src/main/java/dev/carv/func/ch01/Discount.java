@@ -8,9 +8,9 @@ import java.util.Locale;
 
 public interface Discount extends RandomGenerator {
 
-    default List<Double> generatePrices() {
+    default List<Double> generatePrices(int size) {
         var faker = new Faker(Locale.US);
-        return generateList(20, () -> Double.valueOf(faker.commerce().price()));
+        return generateList(size, () -> Double.valueOf(faker.commerce().price()));
     }
 
     Double calculate(List<Double> prices);
